@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="almostDark">#555553</color>
+    <color name="black">#FF000000</color>
+    <color name="orangeDark">#FFC107</color>
+    <color name="redDark">#FF5722</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">KotlinCalculator</string>
+    <style name="Theme.KotlinCalculator" parent="Theme.AppCompat">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/almostDark</item>
+        <item name="colorPrimaryVariant">@color/orangeDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+</resources>
