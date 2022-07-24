@@ -5,7 +5,7 @@
     <color name="orangeDark">#FFC107</color>
     <color name="redDark">#FF5722</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">KotlinCalculator</string>
+    <string name="app_name">Iline</string>
     <style name="Theme.KotlinCalculator" parent="Theme.AppCompat">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/almostDark</item>

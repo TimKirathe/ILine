@@ -19,7 +19,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.KotlinCalculator" >
         <activity
-            android:name="com.badaye.kotlincalculator.MainActivity"
+            android:name="com.timothy.iline.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
