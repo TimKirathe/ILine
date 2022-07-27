@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ed_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/receiver_bubble.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/sender_bubble.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>

@@ -5,8 +5,11 @@ color black
 color orangeDark
 color redDark
 color white
+drawable ed_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable receiver_bubble
+drawable sender_bubble
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
