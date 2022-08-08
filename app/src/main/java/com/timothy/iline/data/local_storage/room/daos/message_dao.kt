@@ -1,10 +1,8 @@
 package com.timothy.iline.data.local_storage.room.daos
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.timothy.iline.domain.modal.Message
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface message_dao {
@@ -15,7 +13,7 @@ interface message_dao {
 //    @Query("SELECT * FROM message_table WHERE timeStamp LIKE :timeStamp")
 //    fun getByTimeStamp(timeStamp:String):Message
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertMessage(message: Message)
 
     @Delete

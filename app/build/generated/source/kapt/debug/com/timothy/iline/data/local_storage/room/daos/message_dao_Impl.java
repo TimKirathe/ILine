@@ -32,7 +32,7 @@ public final class message_dao_Impl implements message_dao {
     this.__insertionAdapterOfMessage = new EntityInsertionAdapter<Message>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `message_table` (`id`,`sender`,`receiver`,`body`,`timeStamp`,`image_url`,`status`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `message_table` (`id`,`sender`,`receiver`,`body`,`timeStamp`,`image_url`,`status`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
       }
 
       @Override

@@ -56,12 +56,12 @@
         "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_sender_bubble.xml.flat",
         "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/drawable/sender_bubble.xml"
+    },
+    {
+        "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",

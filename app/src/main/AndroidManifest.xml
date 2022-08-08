@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinCalculator">
         <activity
-            android:name="com.timothy.iline.MainActivity"
+            android:name=".presentation.chats.ChatListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
