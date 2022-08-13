@@ -8,6 +8,8 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="32" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.badaye.kotlincalculator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -23,7 +25,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.KotlinCalculator" >
+        android:theme="@style/Theme.KotlinCalculator"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.timothy.iline.presentation.chats.ChatListActivity"
+            android:exported="false" />
         <activity
             android:name="com.timothy.iline.MainActivity"
             android:exported="true" >

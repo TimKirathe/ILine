@@ -3,7 +3,7 @@ package com.timothy.iline.data.api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val BASE_URL = "http://192.168.101.11:8080/iline"
+private const val BASE_URL = "http://192.168.20.11:8080/iline/"
 object RetrofitInstance {
     private val retrofit by lazy {
         Retrofit.Builder()
@@ -12,7 +12,7 @@ object RetrofitInstance {
             .build()
     }
 
-    val api:api by lazy {
-        retrofit.create(api::class.java)
+    val api:RemoteApi by lazy {
+        retrofit.create(RemoteApi::class.java)
     }
 }

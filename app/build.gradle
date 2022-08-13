@@ -6,7 +6,7 @@ plugins {
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.badaye.kotlincalculator"
@@ -39,6 +39,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0-alpha01'
     implementation 'com.google.truth:truth:1.1.3'
     implementation 'androidx.arch.core:core-testing:2.1.0'
     testImplementation 'junit:junit:4.13.2'

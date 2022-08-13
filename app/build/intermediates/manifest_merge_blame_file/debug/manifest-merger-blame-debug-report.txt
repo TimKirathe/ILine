@@ -10,83 +10,95 @@
 9        android:targetSdkVersion="32" />
 9-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml
 10
-11    <permission
-11-->[androidx.core:core:1.9.0-alpha05] /Users/macbook/.gradle/caches/transforms-3/c86b1777025011b71fc5e2fd028c2fbc/transformed/core-1.9.0-alpha05/AndroidManifest.xml:23:5-25:47
-12        android:name="com.badaye.kotlincalculator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0-alpha05] /Users/macbook/.gradle/caches/transforms-3/c86b1777025011b71fc5e2fd028c2fbc/transformed/core-1.9.0-alpha05/AndroidManifest.xml:24:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0-alpha05] /Users/macbook/.gradle/caches/transforms-3/c86b1777025011b71fc5e2fd028c2fbc/transformed/core-1.9.0-alpha05/AndroidManifest.xml:25:9-44
-14
-15    <uses-permission android:name="com.badaye.kotlincalculator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0-alpha05] /Users/macbook/.gradle/caches/transforms-3/c86b1777025011b71fc5e2fd028c2fbc/transformed/core-1.9.0-alpha05/AndroidManifest.xml:27:5-97
-15-->[androidx.core:core:1.9.0-alpha05] /Users/macbook/.gradle/caches/transforms-3/c86b1777025011b71fc5e2fd028c2fbc/transformed/core-1.9.0-alpha05/AndroidManifest.xml:27:22-94
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:5:5-66
+11-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:5:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.9.0-beta01] /Users/macbook/.gradle/caches/transforms-3/4d57fd017a76ddf352a8496e461d2979/transformed/core-1.9.0-beta01/AndroidManifest.xml:22:5-24:47
+14        android:name="com.badaye.kotlincalculator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.9.0-beta01] /Users/macbook/.gradle/caches/transforms-3/4d57fd017a76ddf352a8496e461d2979/transformed/core-1.9.0-beta01/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.9.0-beta01] /Users/macbook/.gradle/caches/transforms-3/4d57fd017a76ddf352a8496e461d2979/transformed/core-1.9.0-beta01/AndroidManifest.xml:24:9-44
 16
-17    <application
-17-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:5:5-21:19
-18        android:allowBackup="true"
-18-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.9.0-alpha05] /Users/macbook/.gradle/caches/transforms-3/c86b1777025011b71fc5e2fd028c2fbc/transformed/core-1.9.0-alpha05/AndroidManifest.xml:29:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/ic_launcher"
-21-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:7:9-43
-22        android:label="@string/app_name"
-22-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:8:9-41
-23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:9:9-54
-24        android:supportsRtl="true"
-24-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:10:9-35
-25        android:testOnly="true"
-26        android:theme="@style/Theme.KotlinCalculator" >
-26-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:11:9-54
-27        <activity
-27-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:12:9-20:20
-28            android:name="com.timothy.iline.MainActivity"
-28-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:13:13-58
-29            android:exported="true" >
-29-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:14:13-36
-30            <intent-filter>
-30-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:15:13-19:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:16:17-69
-31-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:16:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:18:17-77
-33-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:18:27-74
-34            </intent-filter>
-35        </activity>
-36
-37        <provider
-37-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-38            android:name="androidx.startup.InitializationProvider"
-38-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-39            android:authorities="com.badaye.kotlincalculator.androidx-startup"
-39-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-40            android:exported="false" >
-40-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-41            <meta-data
-41-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-42                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-42-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-43                android:value="androidx.startup" />
-43-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-44            <meta-data
-44-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-3/43e25e4b1d18880d661293f220da0d56/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-45                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-45-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-3/43e25e4b1d18880d661293f220da0d56/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-46                android:value="androidx.startup" />
-46-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-3/43e25e4b1d18880d661293f220da0d56/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-47        </provider>
-48
-49        <service
-49-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
-50            android:name="androidx.room.MultiInstanceInvalidationService"
-50-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
-51            android:directBootAware="true"
-51-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
-52            android:exported="false" />
-52-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
-53    </application>
+17    <uses-permission android:name="com.badaye.kotlincalculator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.9.0-beta01] /Users/macbook/.gradle/caches/transforms-3/4d57fd017a76ddf352a8496e461d2979/transformed/core-1.9.0-beta01/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0-beta01] /Users/macbook/.gradle/caches/transforms-3/4d57fd017a76ddf352a8496e461d2979/transformed/core-1.9.0-beta01/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:7:5-27:19
+20        android:allowBackup="true"
+20-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.9.0-beta01] /Users/macbook/.gradle/caches/transforms-3/4d57fd017a76ddf352a8496e461d2979/transformed/core-1.9.0-beta01/AndroidManifest.xml:28:18-86
+22        android:debuggable="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:9:9-43
+24        android:label="@string/app_name"
+24-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:10:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:11:9-54
+26        android:supportsRtl="true"
+26-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:12:9-35
+27        android:testOnly="true"
+28        android:theme="@style/Theme.KotlinCalculator"
+28-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:14:9-54
+29        android:usesCleartextTraffic="true" >
+29-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:13:9-46
+30        <activity
+30-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:15:9-17:40
+31            android:name="com.timothy.iline.presentation.chats.ChatListActivity"
+31-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:16:13-64
+32            android:exported="false" />
+32-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:17:13-37
+33        <activity
+33-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:18:9-26:20
+34            android:name="com.timothy.iline.MainActivity"
+34-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:19:13-41
+35            android:exported="true" >
+35-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:20:13-36
+36            <intent-filter>
+36-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:21:13-25:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:22:17-69
+37-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:22:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:24:17-77
+39-->/Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:24:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <provider
+43-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+44            android:name="androidx.startup.InitializationProvider"
+44-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+45            android:authorities="com.badaye.kotlincalculator.androidx-startup"
+45-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+46            android:exported="false" >
+46-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+47            <meta-data
+47-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+48                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+48-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+49                android:value="androidx.startup" />
+49-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-3/f6d7185f40f50579d3d2228a67fb0cd8/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+50            <meta-data
+50-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-3/43e25e4b1d18880d661293f220da0d56/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+51                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+51-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-3/43e25e4b1d18880d661293f220da0d56/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+52                android:value="androidx.startup" />
+52-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-3/43e25e4b1d18880d661293f220da0d56/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+53        </provider>
 54
-55</manifest>
+55        <service
+55-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
+56            android:name="androidx.room.MultiInstanceInvalidationService"
+56-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
+57            android:directBootAware="true"
+57-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
+58            android:exported="false" />
+58-->[androidx.room:room-runtime:2.4.2] /Users/macbook/.gradle/caches/transforms-3/9cb93648962092aab7117be180956b92/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
+59    </application>
+60
+61</manifest>

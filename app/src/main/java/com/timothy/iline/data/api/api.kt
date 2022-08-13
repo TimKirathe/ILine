@@ -5,11 +5,11 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-interface api {
+interface RemoteApi {
 
     @GET("user")
     suspend fun getAllUsers():List<User>
 
     @POST("user")
-    suspend fun saveUser(@Body user: User)
+    suspend fun saveUser(@Body user: User): User
 }

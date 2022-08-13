@@ -33,7 +33,7 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mobile Number" />
+            android:hint="Name" />
 
         <EditText
             android:id="@+id/number"
@@ -41,6 +41,15 @@
             android:layout_height="wrap_content"
             android:hint="Mobile Number"
             android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text = "error text"
+            android:textColor="@color/redDark"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
     <Button

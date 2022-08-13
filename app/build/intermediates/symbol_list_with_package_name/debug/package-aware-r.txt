@@ -2457,6 +2457,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ed_background
 drawable ic_clock_black_24dp
+drawable ic_edit_note
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2643,6 +2644,7 @@ id collapseActionView
 id compress
 id confirm_button
 id constraint
+id cont
 id container
 id content
 id contentPanel
@@ -2690,6 +2692,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editButton
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
@@ -2698,6 +2701,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id error
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2815,6 +2819,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -2833,6 +2838,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -2924,6 +2930,7 @@ id staticPostLayout
 id stop
 id stretch
 id submenuarrow
+id submit
 id submit_area
 id supportScrollUp
 id tabMode
@@ -3090,6 +3097,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chat_list
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3181,6 +3189,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu my_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

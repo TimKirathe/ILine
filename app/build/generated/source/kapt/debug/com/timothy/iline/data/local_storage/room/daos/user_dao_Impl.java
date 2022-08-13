@@ -30,38 +30,49 @@ public final class user_dao_Impl implements user_dao {
     this.__insertionAdapterOfUser = new EntityInsertionAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `user_table` (`id`,`phone`,`name`,`profilePhoto`) VALUES (nullif(?, 0),?,?,?)";
+        return "INSERT OR REPLACE INTO `user_table` (`phone`,`name`,`active`,`joined`,`deviceId`,`profilePhoto`) VALUES (?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, User value) {
-        stmt.bindLong(1, value.getId());
         if (value.getPhone() == null) {
-          stmt.bindNull(2);
+          stmt.bindNull(1);
         } else {
-          stmt.bindString(2, value.getPhone());
+          stmt.bindString(1, value.getPhone());
         }
         if (value.getName() == null) {
-          stmt.bindNull(3);
+          stmt.bindNull(2);
         } else {
-          stmt.bindString(3, value.getName());
+          stmt.bindString(2, value.getName());
         }
-        if (value.getProfile_photo() == null) {
-          stmt.bindNull(4);
+        final int _tmp = value.getActive() ? 1 : 0;
+        stmt.bindLong(3, _tmp);
+        stmt.bindLong(4, value.getJoined());
+        if (value.getDeviceId() == null) {
+          stmt.bindNull(5);
         } else {
-          stmt.bindString(4, value.getProfile_photo());
+          stmt.bindString(5, value.getDeviceId());
+        }
+        if (value.getImageUrl() == null) {
+          stmt.bindNull(6);
+        } else {
+          stmt.bindString(6, value.getImageUrl());
         }
       }
     };
     this.__deletionAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `user_table` WHERE `id` = ?";
+        return "DELETE FROM `user_table` WHERE `phone` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, User value) {
-        stmt.bindLong(1, value.getId());
+        if (value.getPhone() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindString(1, value.getPhone());
+        }
       }
     };
   }
@@ -97,15 +108,15 @@ public final class user_dao_Impl implements user_dao {
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
-      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
-      final int _cursorIndexOfProfilePhoto = CursorUtil.getColumnIndexOrThrow(_cursor, "profilePhoto");
+      final int _cursorIndexOfActive = CursorUtil.getColumnIndexOrThrow(_cursor, "active");
+      final int _cursorIndexOfJoined = CursorUtil.getColumnIndexOrThrow(_cursor, "joined");
+      final int _cursorIndexOfDeviceId = CursorUtil.getColumnIndexOrThrow(_cursor, "deviceId");
+      final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "profilePhoto");
       final List<User> _result = new ArrayList<User>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final User _item;
-        final int _tmpId;
-        _tmpId = _cursor.getInt(_cursorIndexOfId);
         final String _tmpPhone;
         if (_cursor.isNull(_cursorIndexOfPhone)) {
           _tmpPhone = null;
@@ -118,13 +129,25 @@ public final class user_dao_Impl implements user_dao {
         } else {
           _tmpName = _cursor.getString(_cursorIndexOfName);
         }
-        final String _tmpProfile_photo;
-        if (_cursor.isNull(_cursorIndexOfProfilePhoto)) {
-          _tmpProfile_photo = null;
+        final boolean _tmpActive;
+        final int _tmp;
+        _tmp = _cursor.getInt(_cursorIndexOfActive);
+        _tmpActive = _tmp != 0;
+        final long _tmpJoined;
+        _tmpJoined = _cursor.getLong(_cursorIndexOfJoined);
+        final String _tmpDeviceId;
+        if (_cursor.isNull(_cursorIndexOfDeviceId)) {
+          _tmpDeviceId = null;
         } else {
-          _tmpProfile_photo = _cursor.getString(_cursorIndexOfProfilePhoto);
+          _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         }
-        _item = new User(_tmpId,_tmpPhone,_tmpName,_tmpProfile_photo);
+        final String _tmpImageUrl;
+        if (_cursor.isNull(_cursorIndexOfImageUrl)) {
+          _tmpImageUrl = null;
+        } else {
+          _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
+        }
+        _item = new User(_tmpPhone,_tmpName,_tmpActive,_tmpJoined,_tmpDeviceId,_tmpImageUrl);
         _result.add(_item);
       }
       return _result;
@@ -147,14 +170,14 @@ public final class user_dao_Impl implements user_dao {
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
-      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
-      final int _cursorIndexOfProfilePhoto = CursorUtil.getColumnIndexOrThrow(_cursor, "profilePhoto");
+      final int _cursorIndexOfActive = CursorUtil.getColumnIndexOrThrow(_cursor, "active");
+      final int _cursorIndexOfJoined = CursorUtil.getColumnIndexOrThrow(_cursor, "joined");
+      final int _cursorIndexOfDeviceId = CursorUtil.getColumnIndexOrThrow(_cursor, "deviceId");
+      final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "profilePhoto");
       final User _result;
       if(_cursor.moveToFirst()) {
-        final int _tmpId;
-        _tmpId = _cursor.getInt(_cursorIndexOfId);
         final String _tmpPhone;
         if (_cursor.isNull(_cursorIndexOfPhone)) {
           _tmpPhone = null;
@@ -167,13 +190,25 @@ public final class user_dao_Impl implements user_dao {
         } else {
           _tmpName = _cursor.getString(_cursorIndexOfName);
         }
-        final String _tmpProfile_photo;
-        if (_cursor.isNull(_cursorIndexOfProfilePhoto)) {
-          _tmpProfile_photo = null;
+        final boolean _tmpActive;
+        final int _tmp;
+        _tmp = _cursor.getInt(_cursorIndexOfActive);
+        _tmpActive = _tmp != 0;
+        final long _tmpJoined;
+        _tmpJoined = _cursor.getLong(_cursorIndexOfJoined);
+        final String _tmpDeviceId;
+        if (_cursor.isNull(_cursorIndexOfDeviceId)) {
+          _tmpDeviceId = null;
         } else {
-          _tmpProfile_photo = _cursor.getString(_cursorIndexOfProfilePhoto);
+          _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         }
-        _result = new User(_tmpId,_tmpPhone,_tmpName,_tmpProfile_photo);
+        final String _tmpImageUrl;
+        if (_cursor.isNull(_cursorIndexOfImageUrl)) {
+          _tmpImageUrl = null;
+        } else {
+          _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
+        }
+        _result = new User(_tmpPhone,_tmpName,_tmpActive,_tmpJoined,_tmpDeviceId,_tmpImageUrl);
       } else {
         _result = null;
       }
