@@ -5,4 +5,5 @@
     <color name="orangeDark">#FFC107</color>
     <color name="almostDark">#555553</color>
     <color name="redDark">#FF5722</color>
+    <color name="error">#FF223C</color>
 </resources>

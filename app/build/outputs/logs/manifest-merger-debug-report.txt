@@ -4,6 +4,7 @@ ADDED from /Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifes
 INJECTED from /Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:2:1-29:12
 INJECTED from /Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:2:1-29:12
 INJECTED from /Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml:2:1-29:12
+MERGED from [androidx.databinding:viewbinding:7.1.2] /Users/macbook/.gradle/caches/transforms-3/42bf3f74395f855b35efe361def797e3/transformed/viewbinding-7.1.2/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.6.1] /Users/macbook/.gradle/caches/transforms-3/fa679cabc897bcd6409f059654948d3c/transformed/material-1.6.1/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/macbook/.gradle/caches/transforms-3/7a65edbca25d4e81d71dfc2db575206a/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.2] /Users/macbook/.gradle/caches/transforms-3/9d02e6fdca01bd7db63c7826b45dc20e/transformed/appcompat-1.4.2/AndroidManifest.xml:17:1-24:12
@@ -132,6 +133,8 @@ uses-sdk
 INJECTED from /Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml
 INJECTED from /Users/macbook/Documents/KotlinCalculator/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:7.1.2] /Users/macbook/.gradle/caches/transforms-3/42bf3f74395f855b35efe361def797e3/transformed/viewbinding-7.1.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.1.2] /Users/macbook/.gradle/caches/transforms-3/42bf3f74395f855b35efe361def797e3/transformed/viewbinding-7.1.2/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.6.1] /Users/macbook/.gradle/caches/transforms-3/fa679cabc897bcd6409f059654948d3c/transformed/material-1.6.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.6.1] /Users/macbook/.gradle/caches/transforms-3/fa679cabc897bcd6409f059654948d3c/transformed/material-1.6.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/macbook/.gradle/caches/transforms-3/7a65edbca25d4e81d71dfc2db575206a/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41

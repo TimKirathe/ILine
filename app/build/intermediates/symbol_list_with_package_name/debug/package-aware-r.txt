@@ -1263,6 +1263,7 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color error
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -2456,11 +2457,13 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ed_background
+drawable ic_account
 drawable ic_clock_black_24dp
 drawable ic_edit_note
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_list
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -2626,6 +2629,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chatView
 id checkbox
 id checked
 id chip
@@ -2830,6 +2834,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id noChats
 id noScroll
 id noState
 id none
@@ -2859,6 +2864,7 @@ id percent
 id pin
 id position
 id postLayout
+id progress
 id progress_circular
 id progress_horizontal
 id radio
@@ -3189,6 +3195,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout user_item
 menu my_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
