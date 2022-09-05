@@ -4,17 +4,7 @@
             "outputFile": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/4d57fd017a76ddf352a8496e461d2979/transformed/core-1.9.0-beta01/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/9d02e6fdca01bd7db63c7826b45dc20e/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c6b96a6c8b7efc54cb589d1496f3423a/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/357d3ef39268778a93c6a5fd452e2e13/transformed/core-1.9.0-rc01/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

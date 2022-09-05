@@ -16,12 +16,16 @@
         "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_ic_list.xml.flat",
+        "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/drawable/ic_list.xml"
+    },
+    {
         "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_ic_list.xml.flat",
-        "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/drawable/ic_list.xml"
+        "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_ic_exit.xml.flat",
+        "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/drawable/ic_exit.xml"
     },
     {
         "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
@@ -36,6 +40,10 @@
         "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_ic_send.xml.flat",
+        "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/drawable/ic_send.xml"
+    },
+    {
         "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_sender_bubble.xml.flat",
         "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/drawable/sender_bubble.xml"
     },
@@ -46,6 +54,10 @@
     {
         "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/drawable_ed_background.xml.flat",
         "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/drawable/ed_background.xml"
+    },
+    {
+        "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/layout_activity_chat.xml.flat",
+        "source": "/Users/macbook/Documents/KotlinCalculator/app/src/main/res/layout/activity_chat.xml"
     },
     {
         "merged": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",

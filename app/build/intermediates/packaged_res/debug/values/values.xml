@@ -3,11 +3,19 @@
     <color name="almostDark">#555553</color>
     <color name="black">#FF000000</color>
     <color name="error">#FF223C</color>
+    <color name="grey">#F1EDED</color>
     <color name="orangeDark">#FFC107</color>
     <color name="redDark">#FF5722</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Iline</string>
-    <style name="Theme.KotlinCalculator" parent="Theme.AppCompat">
+    <string name="default_web_client_id" translatable="false">167080545253-krdsejdli277vo0t9qkf5danmtr3jae8.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">167080545253</string>
+    <string name="google_api_key" translatable="false">AIzaSyCXzB5RzRToecLb1AqIogv2SXCTKzYUhR0</string>
+    <string name="google_app_id" translatable="false">1:167080545253:android:7ea65b4f7cb367d5693d0c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCXzB5RzRToecLb1AqIogv2SXCTKzYUhR0</string>
+    <string name="google_storage_bucket" translatable="false">iline-135a0.appspot.com</string>
+    <string name="project_id" translatable="false">iline-135a0</string>
+    <style name="Theme.KotlinCalculator" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/almostDark</item>
         <item name="colorPrimaryVariant">@color/orangeDark</item>

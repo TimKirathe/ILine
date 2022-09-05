@@ -10,10 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.timothy.iline.data.api.RetrofitInstance
+import com.timothy.iline.data.firebaseApi.FirebaseApi
 import com.timothy.iline.data.local_storage.preferences.readUser
 import com.timothy.iline.data.local_storage.preferences.writeUser
 import com.timothy.iline.domain.modal.User
-import com.timothy.iline.presentation.MainViewModel
 import com.timothy.iline.presentation.chats.ChatListActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
         val phone_ed = findViewById<EditText>(R.id.number)
         val tx_error = findViewById<TextView>(R.id.error)
         val submit_btn = findViewById<Button>(R.id.submit)
-
-        val viewModel: MainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        val firebaseApi = FirebaseApi()
 
         submit_btn.setOnClickListener {
             if(name_ed.text.isEmpty() || phone_ed.text.isEmpty()){
@@ -44,16 +43,21 @@ class MainActivity : AppCompatActivity() {
                         name = name_ed.text.toString(),
                         phone = phone_ed.text.toString(),
                         imageUrl = "",
-                        active = false,
-                        joined = 0L,
+                        active = true,
+                        joined = System.currentTimeMillis(),
                         deviceId = ""
                     )
 //                    viewModel.onSubmit(user)
                     CoroutineScope(Dispatchers.Main).launch {
                         try {
-                            val remote = RetrofitInstance.api.saveUser(user) // 1000
-                            writeUser(remote)
-                            NavigateToChatScreen()
+//                            val remote = RetrofitInstance.api.saveUser(user) // 1000
+                            if (FirebaseApi.result.value?.users?.contains(user) == false){
+                                firebaseApi.AddUser(user)
+                                writeUser(user)
+                                NavigateToChatScreen()
+                            }else{
+                                tx_error.text = "The user already exists"
+                            }
                         }catch (e:Exception){
                             tx_error.setText(e.message ?: "An error has occurred")
                         }

@@ -7,7 +7,7 @@ import retrofit2.http.POST
 
 interface RemoteApi {
 
-    @GET("user")
+    @GET("users")
     suspend fun getAllUsers():List<User>
 
     @POST("user")

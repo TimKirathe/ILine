@@ -117,37 +117,43 @@ public final class user_dao_Impl implements user_dao {
       final List<User> _result = new ArrayList<User>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final User _item;
+        _item = new User();
         final String _tmpPhone;
         if (_cursor.isNull(_cursorIndexOfPhone)) {
           _tmpPhone = null;
         } else {
           _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
         }
+        _item.setPhone(_tmpPhone);
         final String _tmpName;
         if (_cursor.isNull(_cursorIndexOfName)) {
           _tmpName = null;
         } else {
           _tmpName = _cursor.getString(_cursorIndexOfName);
         }
+        _item.setName(_tmpName);
         final boolean _tmpActive;
         final int _tmp;
         _tmp = _cursor.getInt(_cursorIndexOfActive);
         _tmpActive = _tmp != 0;
+        _item.setActive(_tmpActive);
         final long _tmpJoined;
         _tmpJoined = _cursor.getLong(_cursorIndexOfJoined);
+        _item.setJoined(_tmpJoined);
         final String _tmpDeviceId;
         if (_cursor.isNull(_cursorIndexOfDeviceId)) {
           _tmpDeviceId = null;
         } else {
           _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         }
+        _item.setDeviceId(_tmpDeviceId);
         final String _tmpImageUrl;
         if (_cursor.isNull(_cursorIndexOfImageUrl)) {
           _tmpImageUrl = null;
         } else {
           _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
         }
-        _item = new User(_tmpPhone,_tmpName,_tmpActive,_tmpJoined,_tmpDeviceId,_tmpImageUrl);
+        _item.setImageUrl(_tmpImageUrl);
         _result.add(_item);
       }
       return _result;
@@ -178,37 +184,43 @@ public final class user_dao_Impl implements user_dao {
       final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "profilePhoto");
       final User _result;
       if(_cursor.moveToFirst()) {
+        _result = new User();
         final String _tmpPhone;
         if (_cursor.isNull(_cursorIndexOfPhone)) {
           _tmpPhone = null;
         } else {
           _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
         }
+        _result.setPhone(_tmpPhone);
         final String _tmpName;
         if (_cursor.isNull(_cursorIndexOfName)) {
           _tmpName = null;
         } else {
           _tmpName = _cursor.getString(_cursorIndexOfName);
         }
+        _result.setName(_tmpName);
         final boolean _tmpActive;
         final int _tmp;
         _tmp = _cursor.getInt(_cursorIndexOfActive);
         _tmpActive = _tmp != 0;
+        _result.setActive(_tmpActive);
         final long _tmpJoined;
         _tmpJoined = _cursor.getLong(_cursorIndexOfJoined);
+        _result.setJoined(_tmpJoined);
         final String _tmpDeviceId;
         if (_cursor.isNull(_cursorIndexOfDeviceId)) {
           _tmpDeviceId = null;
         } else {
           _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         }
+        _result.setDeviceId(_tmpDeviceId);
         final String _tmpImageUrl;
         if (_cursor.isNull(_cursorIndexOfImageUrl)) {
           _tmpImageUrl = null;
         } else {
           _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
         }
-        _result = new User(_tmpPhone,_tmpName,_tmpActive,_tmpJoined,_tmpDeviceId,_tmpImageUrl);
+        _result.setImageUrl(_tmpImageUrl);
       } else {
         _result = null;
       }

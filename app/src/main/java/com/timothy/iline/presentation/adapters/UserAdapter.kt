@@ -20,7 +20,7 @@ class UserAdapter(
     override fun getItem(position: Int): User = values[position]
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view = convertView ?: LayoutInflater.from(parent.context).inflate(layoutResource, parent)
+        val view = convertView ?: LayoutInflater.from(parent.context).inflate(layoutResource, parent, false)
         return bindData(getItem(position), view)
     }
 

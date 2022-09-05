@@ -4,7 +4,7 @@
             "outputFile": "/Users/macbook/Documents/KotlinCalculator/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/9d02e6fdca01bd7db63c7826b45dc20e/transformed/appcompat-1.4.2/res/values-v25/values-v25.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c6b96a6c8b7efc54cb589d1496f3423a/transformed/appcompat-1.4.2/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

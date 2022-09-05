@@ -80,11 +80,11 @@ public final class message_dao_Impl implements message_dao {
   }
 
   @Override
-  public void insertMessage(final Message message) {
+  public void insertMessage(final Message arg0) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
-      __insertionAdapterOfMessage.insert(message);
+      __insertionAdapterOfMessage.insert(arg0);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
@@ -92,11 +92,11 @@ public final class message_dao_Impl implements message_dao {
   }
 
   @Override
-  public void deleteMessage(final Message message) {
+  public void deleteMessage(final Message arg0) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
-      __deletionAdapterOfMessage.handle(message);
+      __deletionAdapterOfMessage.handle(arg0);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();

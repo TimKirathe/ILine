@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "167080545253",
+    "project_id": "iline-135a0",
+    "storage_bucket": "iline-135a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167080545253:android:7ea65b4f7cb367d5693d0c",
+        "android_client_info": {
+          "package_name": "com.timothy.iline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167080545253-ubjemab9s6u4m1bv5qn8qn9revdqc93v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.timothy.iline",
+            "certificate_hash": "14a7d18480a1fdf7b0c8620e8bfed691085e5a30"
+          }
+        },
+        {
+          "client_id": "167080545253-krdsejdli277vo0t9qkf5danmtr3jae8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXzB5RzRToecLb1AqIogv2SXCTKzYUhR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167080545253-krdsejdli277vo0t9qkf5danmtr3jae8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
