@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     CoroutineScope(Dispatchers.Main).launch {
                         try {
 //                            val remote = RetrofitInstance.api.saveUser(user) // 1000
-                            if (FirebaseApi.result.value?.users?.contains(user) == false){
+                            if (FirebaseApi.result.value?.users?.map { it.phone }?.contains(user.phone) == false){
                                 firebaseApi.AddUser(user)
                                 writeUser(user)
                                 NavigateToChatScreen()

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.timothy.iline.MainActivity
 import com.timothy.iline.R
 import com.timothy.iline.data.api.RetrofitInstance
+import com.timothy.iline.data.firebaseApi.FirebaseApi
 import com.timothy.iline.data.local_storage.preferences.readUser
 import com.timothy.iline.data.local_storage.preferences.writeUser
 import com.timothy.iline.domain.modal.User
@@ -24,8 +25,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-const val EXTRA_SENDER = "EXTRA_SENDER"
-const val EXTRA_RECEIVER = "EXTRA_RECEIVER"
+const val EXTRA_FRIEND = "EXTRA_FRIEND"
 class ChatListActivity : AppCompatActivity() {
     lateinit var dialog: AlertDialog.Builder
     lateinit var chatList:RecyclerView
@@ -44,11 +44,15 @@ class ChatListActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
             try {
-                val users = RetrofitInstance.api.getAllUsers().filter { it.phone != readUser().phone }
-                val userAdapter = UserAdapter(this@ChatListActivity, R.layout.user_item, users)
-                dialog = AlertDialog.Builder(this@ChatListActivity)
-                    .setAdapter(userAdapter) { dialog, position ->
-                        enterInChat(readUser().phone, users[position].phone)
+//                val users = RetrofitInstance.api.getAllUsers().filter { it.phone != readUser().phone }
+                    FirebaseApi.result.observe(this@ChatListActivity){result->
+                        val usersList = result.users.filter { it.phone != readUser().phone }
+                        val userAdapter = UserAdapter(this@ChatListActivity, R.layout.user_item, usersList)
+                        dialog = AlertDialog.Builder(this@ChatListActivity)
+                            .setAdapter(userAdapter) { dialog, position ->
+                                dialog.dismiss()
+                                enterInChat(usersList[position])
+                            }
                     }
             }catch (e:Exception){
                 error.text = e.message
@@ -74,10 +78,10 @@ class ChatListActivity : AppCompatActivity() {
     }
 
 
-    private fun enterInChat(sender: String, receiver: String) {
+    private fun enterInChat(user: User) {
         val intent = Intent(this@ChatListActivity, ChatActivity::class.java)
-        intent.putExtra(EXTRA_SENDER, sender)
-        intent.putExtra(EXTRA_RECEIVER, receiver)
+//        intent.putExtra(EXTRA_FRIEND, receiver)
+        intent.putExtra(EXTRA_FRIEND, user)
         startActivity(intent)
     }
 

@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.timothy.iline.databinding.ActivityChatBinding
+import com.timothy.iline.domain.modal.User
 
 
 private const val TAG = "ChatActivity"
@@ -18,16 +19,15 @@ class ChatActivity : AppCompatActivity() {
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.myToolbar)
-        val actionBar = supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        val actionBar = supportActionBar
+//        actionBar?.setDisplayHomeAsUpEnabled(true)
         //setup toolbar
         //get the intent extras
-        val sender = intent.getStringExtra(EXTRA_SENDER) as String
-        val receiver = intent.getStringExtra(EXTRA_RECEIVER) as String
-
+        val receiver = intent.getSerializableExtra(EXTRA_FRIEND) as User
+        binding.name.text = receiver.name
 
         //set up recycler view
-
         //send message
         //update messages
 

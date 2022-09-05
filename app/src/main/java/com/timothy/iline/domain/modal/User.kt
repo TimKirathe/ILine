@@ -3,6 +3,7 @@ package com.timothy.iline.domain.modal
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 
 @Entity(tableName = "user_table")
@@ -13,5 +14,5 @@ data class User(
     var joined: Long = 0,
     var deviceId:String = "",
     @ColumnInfo(name = "profilePhoto") var imageUrl: String? = ""
-)
+):Serializable
 

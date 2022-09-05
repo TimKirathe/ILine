@@ -3677,6 +3677,7 @@ int style Base_Widget_MaterialComponents_TextView 0x7f11010c
 int style CardView 0x7f11010d
 int style CardView_Dark 0x7f11010e
 int style CardView_Light 0x7f11010f
+int style CustomTheme 0x7f11041e
 int style EmptyTheme 0x7f110110
 int style MaterialAlertDialog_Material3 0x7f110111
 int style MaterialAlertDialog_Material3_Body_Text 0x7f110112

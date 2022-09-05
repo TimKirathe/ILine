@@ -45,7 +45,8 @@
         </activity>
         <activity
             android:name="com.timothy.iline.presentation.chats.ChatActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/CustomTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
