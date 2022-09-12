@@ -5,6 +5,7 @@ import android.os.PersistableBundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.timothy.iline.data.firebaseApi.FirebaseApi
 import com.timothy.iline.databinding.ActivityChatBinding
 import com.timothy.iline.domain.modal.User
 
@@ -28,6 +29,12 @@ class ChatActivity : AppCompatActivity() {
         binding.name.text = receiver.name
 
         //set up recycler view
+        FirebaseApi.result.observe(this){result->
+            binding.loader.visibility = View.GONE
+//            val messagesAdapter = MessagesAdapter(result.messages)
+//            binding.messages.layoutManager = LinearLayoutManager(this)
+//            binding.messages.adapter = messagesAdapter
+        }
         //send message
         //update messages
 

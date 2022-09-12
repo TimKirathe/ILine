@@ -59,7 +59,7 @@
             android:indeterminate="true" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/chats"
+            android:id="@+id/messages"
             android:layout_width="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_height="match_parent" />

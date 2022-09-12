@@ -63,7 +63,7 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.4.2'
 
     //Kotlin extensions and coroutine support for room
-    implementation 'androidx.room:room-ktx:2.4.2'
+    implementation 'androidx.room:room-ktx:2.4.3'
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //  Kotlin Extensions and Coroutines support for Room
