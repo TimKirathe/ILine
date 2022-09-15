@@ -10,11 +10,11 @@ enum class MessageStatus{
 }
 @Entity(tableName = "message_table")
 data class Message(
-    @PrimaryKey(autoGenerate = true) val id:Int,
-    val sender:String,
-    val receiver:String,
-    val body:String,
-    val timeStamp:Long,
-    val image_url:String,
-    val status: MessageStatus
+    @PrimaryKey(autoGenerate = true) var id:Int? = null,
+    var sender:String = "",
+    var receiver:String = "",
+    var body:String = "",
+    var timeStamp:Long = 0L,
+    var image_url:String = "",
+    var status: MessageStatus = MessageStatus.Sent
 )

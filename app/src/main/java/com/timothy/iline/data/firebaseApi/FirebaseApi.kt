@@ -37,10 +37,16 @@ class FirebaseApi {
                 Log.e(TAG, "An error has occurred: ",error )
             }
             value?.let {
+                val temp = mutableListOf<Message>()
                 for (doc in value.documents){
                     val message = doc.toObject(Message::class.java)
-                    Log.i(TAG, "A user has been added: ${message?.body}")
+                    message?.let {
+                        temp.add(message)
+                    }
                 }
+                result.value = result.value?.copy(
+                    messages = temp
+                )
             }
         }
     }
