@@ -30,7 +30,7 @@ public final class user_dao_Impl implements user_dao {
     this.__insertionAdapterOfUser = new EntityInsertionAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `user_table` (`phone`,`name`,`active`,`joined`,`deviceId`,`profilePhoto`) VALUES (?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `user_table` (`phone`,`name`,`active`,`joined`,`deviceId`,`profilePhoto`,`lastSeen`) VALUES (?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -57,6 +57,11 @@ public final class user_dao_Impl implements user_dao {
           stmt.bindNull(6);
         } else {
           stmt.bindString(6, value.getImageUrl());
+        }
+        if (value.getLastSeen() == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, value.getLastSeen());
         }
       }
     };
@@ -114,6 +119,7 @@ public final class user_dao_Impl implements user_dao {
       final int _cursorIndexOfJoined = CursorUtil.getColumnIndexOrThrow(_cursor, "joined");
       final int _cursorIndexOfDeviceId = CursorUtil.getColumnIndexOrThrow(_cursor, "deviceId");
       final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "profilePhoto");
+      final int _cursorIndexOfLastSeen = CursorUtil.getColumnIndexOrThrow(_cursor, "lastSeen");
       final List<User> _result = new ArrayList<User>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final User _item;
@@ -154,6 +160,13 @@ public final class user_dao_Impl implements user_dao {
           _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
         }
         _item.setImageUrl(_tmpImageUrl);
+        final String _tmpLastSeen;
+        if (_cursor.isNull(_cursorIndexOfLastSeen)) {
+          _tmpLastSeen = null;
+        } else {
+          _tmpLastSeen = _cursor.getString(_cursorIndexOfLastSeen);
+        }
+        _item.setLastSeen(_tmpLastSeen);
         _result.add(_item);
       }
       return _result;
@@ -182,6 +195,7 @@ public final class user_dao_Impl implements user_dao {
       final int _cursorIndexOfJoined = CursorUtil.getColumnIndexOrThrow(_cursor, "joined");
       final int _cursorIndexOfDeviceId = CursorUtil.getColumnIndexOrThrow(_cursor, "deviceId");
       final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "profilePhoto");
+      final int _cursorIndexOfLastSeen = CursorUtil.getColumnIndexOrThrow(_cursor, "lastSeen");
       final User _result;
       if(_cursor.moveToFirst()) {
         _result = new User();
@@ -221,6 +235,13 @@ public final class user_dao_Impl implements user_dao {
           _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
         }
         _result.setImageUrl(_tmpImageUrl);
+        final String _tmpLastSeen;
+        if (_cursor.isNull(_cursorIndexOfLastSeen)) {
+          _tmpLastSeen = null;
+        } else {
+          _tmpLastSeen = _cursor.getString(_cursorIndexOfLastSeen);
+        }
+        _result.setLastSeen(_tmpLastSeen);
       } else {
         _result = null;
       }

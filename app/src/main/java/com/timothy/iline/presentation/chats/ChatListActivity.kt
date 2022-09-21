@@ -13,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.timothy.BaseActivity
 import com.timothy.iline.MainActivity
 import com.timothy.iline.R
 import com.timothy.iline.data.api.RetrofitInstance
@@ -26,7 +27,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 const val EXTRA_FRIEND = "EXTRA_FRIEND"
-class ChatListActivity : AppCompatActivity() {
+class ChatListActivity : BaseActivity() {
     lateinit var dialog: AlertDialog.Builder
     lateinit var chatList:RecyclerView
     lateinit var progress:ProgressBar

@@ -7,16 +7,22 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.timothy.iline.R
 import com.timothy.iline.domain.modal.Message
+import com.timothy.iline.formatTime
 
-class MessagesAdapter(val messages:List<Message>, val number:String) : RecyclerView.Adapter<MessagesAdapter.MyViewHolder>() {
+class MessagesAdapter(val messages:List<Any>, val number:String) : RecyclerView.Adapter<MessagesAdapter.MyViewHolder>() {
 
     open class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-        private val msgBody: TextView = itemView.findViewById(R.id.body)
-        private val time: TextView = itemView.findViewById(R.id.time)
 
-        fun bind(message:Message){
-            msgBody.text = message.body
-            time.text = message.timeStamp.toString()
+        fun bind(message:Any){
+            if(message is String){
+                val timeline = itemView.findViewById<TextView>(R.id.timeline)
+                timeline.text = message
+            }else {
+                val msgBody: TextView = itemView.findViewById(R.id.body)
+                val time: TextView = itemView.findViewById(R.id.time)
+                msgBody.text = (message as Message).body
+                time.text = formatTime(message.timeStamp)
+            }
         }
     }
 
@@ -25,14 +31,24 @@ class MessagesAdapter(val messages:List<Message>, val number:String) : RecyclerV
     class OtherMessageViewHolder(itemView: View): MyViewHolder(itemView)
 
     override fun getItemViewType(position: Int): Int {
-        when(messages[position].sender){
-            number -> return 0
-            else -> return 1
+        if (messages[position] is String){
+            return 2
+        }else{
+            when((messages[position] as Message).sender){
+                number -> return 0
+                else -> return 1
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(if (viewType ==0)R.layout.my_bubbles else R.layout.friend_bubbles,parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(
+            if (viewType == 0)
+                R.layout.my_bubbles
+            else if(viewType == 1)
+                R.layout.friend_bubbles
+            else
+                R.layout.timeline,parent, false)
         return MyViewHolder(view)
     }
 

@@ -7,6 +7,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.timothy.iline.domain.modal.Message
 import com.timothy.iline.domain.modal.User
+import java.lang.Exception
 
 private const val MESSAGE_COLLECTION = "Messages"
 private const val USER_COLLECTION = "Users"
@@ -68,6 +69,16 @@ class FirebaseApi {
             .addOnFailureListener {
 
             }
+    }
+
+    fun updateLastSeen(user: User, status:String, result:(Exception?)->Unit){
+        db.collection(USER_COLLECTION).whereEqualTo("phone",user.phone).get().addOnSuccessListener {
+            it.documents.firstOrNull()?.reference?.let {docRef->
+                docRef.update("lastSeen",status).addOnSuccessListener {
+                    result(null)
+                }.addOnFailureListener(result)
+            }
+        }
     }
 
     companion object{

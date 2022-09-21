@@ -13,6 +13,7 @@ data class User(
     var active:Boolean = false,
     var joined: Long = 0,
     var deviceId:String = "",
-    @ColumnInfo(name = "profilePhoto") var imageUrl: String? = ""
+    @ColumnInfo(name = "profilePhoto") var imageUrl: String? = "",
+    var lastSeen:String = "online"
 ):Serializable
 
